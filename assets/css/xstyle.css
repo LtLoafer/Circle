@@ -1,0 +1,781 @@
+/* MADE BY CIRCLE                                                                       */
+
+
+/* ====================================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ==================================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700,400);
+
+font-family: 'Montserrat', sans-serif;
+
+/* Custom font test > start____________________________________________________________ */
+@font-face {
+	font-family: 'icomoon';
+	src:url('../assets/fonts/icomoon.eot?po4vw1');
+	src:url('../assets/fonts/icomoon.eot?#iefixpo4vw1') format('embedded-opentype'),
+		url('../assets/fonts/icomoon.woff?po4vw1') format('woff'),
+		url('../assets/fonts/icomoon.ttf?po4vw1') format('truetype'),
+		url('../assets/fonts/icomoon.svg?po4vw1#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Custom font test > end______________________________________________________________ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #999999;
+}
+
+::-moz-selection {
+    background: #999999;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+
+/* ====================================================================================
+   General styles
+   ==================================================================================== */
+
+html,
+body {
+    height: 100%;
+    width:100%;
+}
+
+body {
+    height:100%;
+    width:100%;
+    font-family: "Montserrat" sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+#loading {
+/*background: url(../img/ico_loading.gif) no-repeat center top; */
+    background-size: 100% 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    text-align: center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+	width: 100%;
+    
+    
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+    
+    
+
+#preload { display: none} 
+
+#loaded section,
+#no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+    color: #999999;
+}
+
+h5, {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #999999;
+    font-size: 50px;
+}
+
+p {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+    color: #999999;
+}
+
+#circlet {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-iteration-count: 1;
+
+    -moz-animation-duration: 3s;
+  -moz-animation-delay: 3s;
+  -moz-animation-iteration-count: 1;
+    
+    -o-animation-duration: 3s;
+  -o-animation-delay: 1.5s;
+  -o-animation-iteration-count: 1;    
+}
+
+/* ====================================================================================
+   Menu
+   ==================================================================================== */
+
+.menu-divider {
+    margin: 0px 20px 5px 40px;
+    width: 105px;
+    border: solid rgb(126,255,255);
+    border: solid #999;
+    border-width: 3px 0 0;
+    
+    
+}
+
+.menu {
+	position: fixed;
+	right: -200px;
+	width: 260px;
+	height: 100%;
+	top: 0;
+	z-index: 10;
+	text-align: left;
+}
+
+.menu.menu-open {
+	right: 0px;
+}
+
+.menu-wrap {
+	position: absolute;
+	top: 0;
+	left: 60px;
+	background: #444444;
+/*  opacity: 1; */
+	width: 300px;
+	height: 100%;
+}
+
+.menu a {
+	margin-left: 40px;
+	color: #999;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 35px;
+	letter-spacing: 0.1em;
+    padding-bottom: 5px
+    
+}
+
+.menu a:hover {
+    text-decoration: none;
+	color: #ffffff;
+}
+
+.menu a:active {
+	color: #ffffff;
+}
+
+.menu a > i {
+	float: left;
+	display: inline-block;
+	vertical-align: middle; 
+	text-align: left;
+	width: 30px;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 25px 2px;
+}
+
+.menu-close {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	font-size: 14px;
+	color: #808080;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	top: 20px;
+	right: 5px;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+.menu-close:hover {
+	color: #ffffff;
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+/* Push the body after clicking the menu button */
+.body-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.body-push-toright {
+	left: 200px;
+}
+
+.body-push-toleft {
+	left: -200px;
+}
+
+.menu,
+.body-push {
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		 -o-transition: all .3s ease;
+			transition: all .3s ease;
+}
+
+#menuToggle {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	z-index: 11;
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+#menuToggle:hover {
+	color: #444;
+	background: rgba(0,0,0,0);
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		 -o-transition: all .1s ease-in-out;
+			transition: all .1s ease-in-out;
+}
+
+
+/* ====================================================================================
+   Main Content
+   ==================================================================================== */
+
+/* Home Page
+______________________________________________________________________________________ */
+
+#headerwrap {
+	background: url(../img/Design_01.jpg) no-repeat center top;
+    background-size: 100% 100%;
+    position: relative;
+    text-align: center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 100%;
+	width: 100%;
+    
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+/* CSS for circle logo on section 1 */
+#circlelogo {
+    position: absolute;
+    float: left;
+    width: 53px;
+    left: 20px;
+    top: 20px;
+}
+
+#headerwrap .container{
+    height: 700px;
+	width: 100%;
+}
+
+#circlet {
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    top :25%;
+    left: 0;
+    width: 100%;
+}
+
+#circlet img{}
+
+#IDPD {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 100px;
+    padding-bottom: 30px;
+}
+
+#IDPD h1 {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+#Scrdown {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 50px;  
+}
+
+#Scrdown h2 {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0px;
+}
+
+
+/* Home Page *RESPONSIVE
+______________________________________________________________________________________ */
+
+@media (max-width: 640px) {
+    #IDPD h1 {
+        font-size: 20px; }
+    #circlet img{
+        height: 300px; }
+}
+
+@media (max-width: 400px) {
+    #IDPD h1 {
+        font-size: 16px;}
+    #circlet img {
+        height: 250px; }
+}
+
+@media (max-height: 480px) {
+    #headerwrap .container{ 
+        height: 500px; width: 100%; }
+    #circlet img{ 
+        margin-top: -50px; height: 220px; }
+    #IDPD {
+        padding-bottom: 0px; }
+}
+
+
+
+
+/* We are Circle 2
+______________________________________________________________________________________ */
+
+#WEARECIRCLE {
+    text-align: center; background-color: #F2F2F2;}
+
+#WEARECIRCLE .row {
+    padding-top: 170px; padding-bottom: 170px;}
+
+#WEARECIRCLE h1 {
+    font-size: 44px; color: #666666;}
+
+#WEARECIRCLE h2 {
+    font-size: 36px; color: #999999;}
+
+#WEARECIRCLE #Scrdown4 h2 {
+    font-size: 12px; color: #999; padding-bottom: 50px}
+
+/* We are Circle *RESPONSIVE
+______________________________________________________________________________________ */
+
+@media (max-width: 990px) {
+    #WEARECIRCLE .row { 
+        padding-left: 40px; padding-right: 40px; padding-top: 170px; padding-bottom: 140px;}
+    #WEARECIRCLE h1 { 
+        font-size: 38px; }
+    #WEARECIRCLE h2 { 
+        font-size: 26px; }
+}
+
+@media (max-width: 640px) {
+    #WEARECIRCLE .row { 
+        padding-left: 20px; padding-right: 20px; padding-top: 140px; padding-bottom: 100px;}
+    #WEARECIRCLE h1 { 
+        font-size: 38px; }
+    #WEARECIRCLE h2 { 
+        font-size: 23px; }
+}
+
+@media (max-width: 400px) {
+    #WEARECIRCLE .row { 
+        padding-left: 20px; padding-right: 20px; padding-top: 140px; padding-bottom: 100px;}
+    #WEARECIRCLE h1 { 
+        font-size: 30px; }
+    #WEARECIRCLE h2 { 
+        font-size: 18px; }
+}
+
+/* Work 
+______________________________________________________________________________________ */
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.work {
+    background-color: #000000;
+}
+
+.work .container {
+    padding: 0; width: 100%; }
+
+.work .row {
+   margin: 0; }
+
+
+/* WHAT WE DO
+______________________________________________________________________________________ */
+
+.whatwedo {
+    text-align: center; letter-spacing:0.1px; background-color: #F2F2F2; }
+
+.whatwedo h1 {
+    color: #666666; padding: 50px 0px 30px 0px; }
+
+.whatwedo h2 {
+    color: #666666; padding: 0px 0px 20px 0px; }
+
+.whatwedo h3 {
+    color: #666666; font-size: 10pt; line-height: 14pt; }
+
+.whatwedo p { 
+    color: #999999; font-size: 10pt; font-weight: 400; }
+
+.whatwedo .container{
+    padding: 0px 0px 100px 0px; }    
+
+/* We hope you like
+______________________________________________________________________________________ */
+
+
+#likeus {
+    background-color: rgb(126, 253, 253); text-align: center; }
+
+#likeus .row {
+    padding-top: 100px; padding-bottom: 10px; }
+
+#likeus h2 {
+    font-size: 36px; color: #ffffff; padding-bottom: 20px; }
+
+#likeus h3 {
+    padding-bottom: 30px; font-size: 22px; letter-spacing:0px; color: #ffffff; }
+
+#likeus .btn{
+    padding: 10px 30px 10px 30px; letter-spacing:2px; font-size: 28px; background: #ffffff;
+    color: rgb(126,255,255); outline: none; font-weight: 400; margin-bottom: 60px; }
+
+#likeus .btn:hover {
+    background: #000000; color: #ffffff; }
+
+#likeus #viewdetails .row {
+    padding-top: 0px; }
+
+#viewdetails #submit {
+    margin-top: 20px; margin-bottom: 50px; letter-spacing:2px; font-weight: 400;
+    font-size: 18px; background: #000; color: #ffffff; }
+
+
+/* Get in Touch *RESPONSIVE
+______________________________________________________________________________________ */
+
+
+@media (max-width: 990px) {
+    #likeus .row { 
+        padding-left: 40px; padding-right: 40px; padding-top: 100px; padding-bottom: 10px;}
+    #likeus h2 { 
+        font-size: 38px; }
+    #likeus h3 { 
+        font-size: 26px; }
+}
+
+@media (max-width: 640px) {
+    #likeus .row { 
+        padding-left: 20px; padding-right: 20px; padding-top: 100px; padding-bottom: 10px;}
+    #likeus h2 {
+        font-size: 23px; }
+    #likeus h3 {
+        font-size: 21px; }
+}
+
+@media (max-width: 400px) {
+    #likeus .row { 
+        padding-left: 20px; padding-right: 20px; padding-top: 100px; padding-bottom: 10px;}
+    #likeus h2 {
+        font-size: 18px; }
+    #likeus h3 {
+        font-size: 16px; }
+}
+
+
+
+
+/* We hope you like
+______________________________________________________________________________________ */
+/*
+
+#likeus {
+    background-color: rgb(126,255,255);
+    min-height: 700px;
+    text-align: center;
+}
+
+.likeusplease .row {
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+.likeusplease .paragraph h2 {
+    margin-top: 220px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    color: #ffffff;
+    
+}
+
+.likeusplease h3 {
+    padding-bottom: 30px;
+    margin: auto;
+    font-size: 22px;
+    letter-spacing:0px;
+    color: #ffffff;
+}
+
+
+.likeusplease .btn{
+    padding: 10px 30px 10px 30px;
+    letter-spacing:2px;
+    font-size: 28px;
+    background: #ffffff;
+    color: rgb(126,255,255);
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.likeusplease .btn:hover {
+    background: #000000;
+    color: #ffffff;
+    
+}
+
+#viewdetails #submit {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    letter-spacing:2px;
+    font-weight: 400;
+    font-size: 18px;
+    background: #000;
+    color: #ffffff;
+}
+
+/* Get in Touch *RESPONSIVE
+______________________________________________________________________________________ */
+
+/*
+@media (max-width: 640px) {
+    
+    #likeus {
+        min-height: 500px;
+    }
+    
+    .likeusplease .paragraph {
+        
+    }
+    
+    .likeusplease .paragraph h2 {
+        margin-top: 100px;
+        font-size: 26px;
+        
+    }
+    
+    .likeusplease h3 {
+    padding-bottom: 30px;
+    margin: auto;
+    font-size: 18px;
+    }
+    
+    .likeusplease .btn{
+    margin-bottom: 50px;
+}
+    
+    
+}
+
+@media (min-width: 992px) {
+    
+    .likeusplease .row {
+    padding-left: 150px;
+    padding-right: 150px
+    }
+}
+
+/* Enquiry Sent PHP
+______________________________________________________________________________________ */
+
+#enquirysent {
+    min-height: 100%;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+#enquirysent h1{
+    font-size: 32px;
+}
+
+#enquirysent h2{
+    font-size: 24px;
+}
+
+#enquirysent a {
+    
+}
+
+#enquirysent a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+/* Contact Wrap 
+______________________________________________________________________________________ */
+
+#contactwrap {
+    text-align: center;
+	background-color: #000000;
+        
+}
+
+#contactwrap .links{
+    padding-top: 30px;
+}
+
+#contactwrap .links a{
+    font-size: 14px;
+	color: #ffffff;
+    letter-spacing:2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contactwrap .links a:hover {
+    text-decoration: none;
+	color: #999999;
+}
+
+#contactwrap p {
+    font-size: 12px;
+	color: #666666;
+    padding-top: 10px;
+    padding-bottom: 40px;
+ 
+}
+
+
+#contactwrap small {
+	font-size: 13px;
+}
+
+.contact {
+	background-image: url(../img/contact-sep.jpg);
+}
+
+#contactwrap label {
+	color: #f2f2f2;
+	margin-top: 10px;
+}
+
+.in.collapse+a.btn.showdetails:before
+{
+    content:'Hide details «';
+}
+.collapse+a.btn.showdetails:before
+{
+    content:'USE OUR CONTACT FORM';
+    }
+#submit {
+        
+    margin-bottom: 15px;
+}
+
+
